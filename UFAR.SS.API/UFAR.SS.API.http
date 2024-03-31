@@ -1,0 +1,11 @@
+@UFAR.SS.API_HostAddress = http://localhost:5107
+
+GET {{UFAR.SS.API_HostAddress}}/todos/
+Accept: application/json
+
+###
+
+GET {{UFAR.SS.API_HostAddress}}/todos/1
+Accept: application/json
+
+###
