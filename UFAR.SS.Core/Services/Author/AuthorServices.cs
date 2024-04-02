@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using UFAR.SS.Core.Services.Author;
-using UFAR.SS.Data.DAO;
+﻿using UFAR.SS.Data.DAO;
 using UFAR.SS.Data.Entities;
 
-namespace UFAR.SS.Services
+namespace UFAR.SS.Core.Services.Author
 {
     public class AuthorService : IAuthorServices
     {
