@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using UFAR.SS.Data.DAO;
+using UFAR_SS_Data.DAO;
 
 #nullable disable
 
-namespace UFAR.SS.Data.Migrations
+namespace UFAR_SS_Data.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
     partial class ApplicationDBContextModelSnapshot : ModelSnapshot
@@ -22,7 +22,7 @@ namespace UFAR.SS.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("UFAR.SS.Data.Entities.AuthorEntity", b =>
+            modelBuilder.Entity("UFAR_SS_Data.Entities.AuthorEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -47,10 +47,10 @@ namespace UFAR.SS.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Authors");
+                    b.ToTable("Author");
                 });
 
-            modelBuilder.Entity("UFAR.SS.Data.Entities.ItemEntity", b =>
+            modelBuilder.Entity("UFAR_SS_Data.Entities.ItemEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -79,7 +79,7 @@ namespace UFAR.SS.Data.Migrations
                     b.ToTable("Items");
                 });
 
-            modelBuilder.Entity("UFAR.SS.Data.Entities.StyleEntity", b =>
+            modelBuilder.Entity("UFAR_SS_Data.Entities.StyleEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -101,29 +101,29 @@ namespace UFAR.SS.Data.Migrations
 
                     b.HasIndex("ItemEntityId");
 
-                    b.ToTable("Styless");
+                    b.ToTable("Styles");
                 });
 
-            modelBuilder.Entity("UFAR.SS.Data.Entities.ItemEntity", b =>
+            modelBuilder.Entity("UFAR_SS_Data.Entities.ItemEntity", b =>
                 {
-                    b.HasOne("UFAR.SS.Data.Entities.AuthorEntity", null)
+                    b.HasOne("UFAR_SS_Data.Entities.AuthorEntity", null)
                         .WithMany("Items")
                         .HasForeignKey("AuthorEntityId");
                 });
 
-            modelBuilder.Entity("UFAR.SS.Data.Entities.StyleEntity", b =>
+            modelBuilder.Entity("UFAR_SS_Data.Entities.StyleEntity", b =>
                 {
-                    b.HasOne("UFAR.SS.Data.Entities.ItemEntity", null)
+                    b.HasOne("UFAR_SS_Data.Entities.ItemEntity", null)
                         .WithMany("Styles")
                         .HasForeignKey("ItemEntityId");
                 });
 
-            modelBuilder.Entity("UFAR.SS.Data.Entities.AuthorEntity", b =>
+            modelBuilder.Entity("UFAR_SS_Data.Entities.AuthorEntity", b =>
                 {
                     b.Navigation("Items");
                 });
 
-            modelBuilder.Entity("UFAR.SS.Data.Entities.ItemEntity", b =>
+            modelBuilder.Entity("UFAR_SS_Data.Entities.ItemEntity", b =>
                 {
                     b.Navigation("Styles");
                 });

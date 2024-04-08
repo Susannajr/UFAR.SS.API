@@ -1,10 +1,21 @@
-﻿using UFAR.SS.Data.Entities;
+﻿using UFAR_SS_Data.Entities;
 
-namespace UFAR.SS.Core.Services.Style
+///<summary>
+///The interface defines methods for managing styles.
+///Sequentially it adds a new style to the system.
+///Removes a style from the system by ID.
+///Updates an existing style's information.
+///Deletes a style from the system.
+///Retrieves a list of all styles in the system.
+///Retrieves a style by its ID.
+///Retrieves a style by its name.
+/// </summary>
+
+namespace UFAR_SS_Core.Services.Style
 {
     public interface IStyleServices
     {
-        void AddStyle(StyleEntity style);
+        StyleEntity AddStyle(StyleEntity style);
         void RemoveStyle(int styleId);
         void UpdateStyle(StyleEntity style);
         void DeleteStyle(StyleEntity style);

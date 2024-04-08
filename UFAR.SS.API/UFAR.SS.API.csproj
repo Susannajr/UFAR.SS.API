@@ -20,4 +20,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\UFAR.SS.Core\UFAR_SS_Core.csproj" />
+    <ProjectReference Include="..\UFAR.SS.Data\UFAR_SS_Data.csproj" />
+  </ItemGroup>
+
 </Project>
